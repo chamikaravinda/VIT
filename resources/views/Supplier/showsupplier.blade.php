@@ -1,5 +1,5 @@
 
-@extends('layouts.dashboard')
+@extends('layouts.admin')
 
 @section('header')
     <h1>

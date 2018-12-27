@@ -38,7 +38,7 @@
 <div class="wrapper">
 
     <header class="main-header">
-        @include('inc.navbar')
+        @include('layouts.Components.navbar')
     </header>
     <!-- Full Width Column -->
     <div class="content-wrapper">

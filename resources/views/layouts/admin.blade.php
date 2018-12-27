@@ -22,9 +22,8 @@
     <!-- data tables -->
     {{Html::style('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}
 
-<!-- bootstrap datepicker -->
+    <!-- bootstrap datepicker -->
     {{Html::style('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}
-
     @yield('styles')
 
 
@@ -43,9 +42,8 @@
 <body class="hold-transition skin-black-light sidebar-mini">
 <div class="wrapper">
 
-    @include('inc.navbar')
-    @include('inc.sidebar')
-
+    @include('layouts.Components.navbar')
+    @include('layouts.Components.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -53,62 +51,45 @@
         <section class="content-header">
             @yield('header')
         </section>
-
         <!-- Main content -->
         <section class="content container-fluid">
-
-            @include('inc.messages')
+            @include('layouts.Components.messages')
             @yield('content')
-
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
-    @include('inc.sidebar')
-
     <!-- /.control-sidebar -->
     <!-- Add the sidebar's background. This div must be placed
     immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
 </div>
+
 <!-- ./wrapper -->
+    <!-- jQuery 3 -->
+    {{Html::script('bower_components/jquery/dist/jquery.min.js')}}
 
-<!-- REQUIRED JS SCRIPTS -->
+    <!-- Bootstrap 3.3.7 -->
+    {{Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js')}}
 
-@yield('page_JavaScrips')
+    <!-- DataTables -->
+    {{Html::script('bower_components/datatables.net/js/jquery.dataTables.min.js')}}
 
-<!-- jQuery 3 -->
-{{Html::script('bower_components/jquery/dist/jquery.min.js')}}
+    {{Html::script('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}
 
-<!-- Bootstrap 3.3.7 -->
-{{Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js')}}
+    <!-- SlimScroll -->
+    {{Html::script('bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}
 
-<!-- DataTables -->
-{{Html::script('bower_components/datatables.net/js/jquery.dataTables.min.js')}}
+    <!-- FastClick -->
+    {{Html::script('bower_components/fastclick/lib/fastclick.js')}}
 
-{{Html::script('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}
+    <!-- AdminLTE App -->
+    {{Html::script('dist/js/adminlte.min.js')}}
 
-<!-- SlimScroll -->
-{{Html::script('bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}
-
-<!-- FastClick -->
-{{Html::script('bower_components/fastclick/lib/fastclick.js')}}
-
-<!-- AdminLTE App -->
-{{Html::script('dist/js/adminlte.min.js')}}
-
-<!-- AdminLTE for demo purposes -->
-{{Html::script('dist/js/demo.js')}}
-<!-- date picker -->
-{{Html::script('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}
-
-
-
-@yield('page_JavaScrips')
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. -->
+    <!-- AdminLTE for demo purposes -->
+    {{Html::script('dist/js/demo.js')}}
+    <!-- date picker -->
+    {{Html::script('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}
+@yield('js')
 </body>
 </html>
