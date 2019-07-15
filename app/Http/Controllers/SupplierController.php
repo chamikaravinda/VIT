@@ -45,7 +45,7 @@ class SupplierController extends Controller
     {
         $this->validate($request,[
             'name'=> 'required',
-            'contactnum'=> 'required|max:10',
+            'contact'=> 'required|max:10',
             'address'=>'nullable'
         ]);
 
@@ -53,7 +53,7 @@ class SupplierController extends Controller
 
         $supplier->name=$request->input('name');
         $supplier->address=$request->input('address');
-        $supplier->contactnum=$request->input('contactnum');
+        $supplier->contact=$request->input('contact');
 
         $supplier->save();
         return redirect('/suppliers')->with('success','Suppiler Added');

@@ -38,7 +38,7 @@
                     {{ Form::label('contactnum','Contact Number',['class'=>'col-sm-2 control-label']) }}
 
                     <div class="col-sm-10">
-                        {{Form::text('contactnum',$suppliers->contactnum,['class'=> 'form-control','placeholder'=>'Contact Number' ])}}
+                        {{Form::text('contactnum',$suppliers->contact,['class'=> 'form-control','placeholder'=>'Contact Number' ])}}
                     </div>
                 </div>
 

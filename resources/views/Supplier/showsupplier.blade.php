@@ -34,7 +34,7 @@
                                     <td>{{$Supplier->id}}</td>
                                     <td>{{$Supplier->name}}</td>
                                     <td>{{$Supplier->address}}</td>
-                                    <td>{{$Supplier->contactnum}}</td>
+                                    <td>{{$Supplier->contact}}</td>
                                     <td> <a href="/suppliers/{{$Supplier->id}}/edit" class="btn btn-link"> Edit</a> </td>
                                     <td>
 
